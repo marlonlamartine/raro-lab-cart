@@ -6,6 +6,27 @@
       "picture": "https://somos.lojaiplace.com.br/wp-content/uploads/2021/04/apple_iphone-12-spring21_purple_04202021.jpg",
       "quantity": 2,
       "price": 299.50
+    },
+    {
+      "id": 2,
+      "name": "Product 2",
+      "picture": "https://somos.lojaiplace.com.br/wp-content/uploads/2021/04/apple_iphone-12-spring21_purple_04202021.jpg",
+      "quantity": 3,
+      "price": 299.50
+    },
+    {
+      "id": 1,
+      "name": "Product 3",
+      "picture": "https://somos.lojaiplace.com.br/wp-content/uploads/2021/04/apple_iphone-12-spring21_purple_04202021.jpg",
+      "quantity": 2,
+      "price": 299.50
+    },
+    {
+      "id": 1,
+      "name": "Product 4",
+      "picture": "https://somos.lojaiplace.com.br/wp-content/uploads/2021/04/apple_iphone-12-spring21_purple_04202021.jpg",
+      "quantity": 2,
+      "price": 299.50
     }
   ]
 }
