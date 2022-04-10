@@ -4,6 +4,7 @@ import Cart from "../components/Cart";
 import { Container } from "../components/Container";
 import Header from "../components/Header";
 import Product, { ProductProps } from "../components/Product";
+import { useProductStore } from "../contexts/Products";
 
 /*const data: ProductProps = {
   id: 1,
@@ -15,27 +16,19 @@ import Product, { ProductProps } from "../components/Product";
 
 const Home = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const [product_list, setProduct_list] = useState<ProductProps[]>();
-  //const [product, setProduct] = useState<ProductProps>();
 
-  async function buscaProdutos() {
-
-    const response = await axios.get("http://localhost:3001/products");
-    setProduct_list(response.data)
-    //setProduct(response.data[0]);
-    console.log(response.data);
-  }
+  const { products, setProducts } = useProductStore();
 
   useEffect(() => {
-    buscaProdutos()
+    setProducts()
   }, [])
 
   return (
     <>
       <Header setIsOpen={setIsOpen} />
       <Container>
-        {product_list?.map((item) =>
-          <Product {...item} />
+        {products.map((product) =>
+          <Product key={product.id} {...product} />
         )}
 
         <Cart isOpen={isOpen} setIsOpen={setIsOpen} />
